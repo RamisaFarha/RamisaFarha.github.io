@@ -1,0 +1,654 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ramisa Farha - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
+        #header {
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #header .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header .avatar img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        #header .profession {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        /* Button Style */
+        .cv-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #2ecc71;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+            margin-top: 30px;
+        }
+
+        .cv-button:hover {
+            background-color: #27ae60;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Content */
+        #main {
+            padding: 40px 20px;
+            background-color: #fff;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Header */
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        /* Skills Section */
+        #two {
+            padding: 50px 20px;
+            background-color: #ecf0f1;
+        }
+
+        .skill-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Research Interests Section */
+        #three {
+            padding: 60px 20px;
+        }
+
+        .research-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .research-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .research-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .research-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .research-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Projects Section */
+        #five {
+            padding: 60px 20px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .work-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .work-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .work-item .image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .work-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #3498db;
+            padding: 20px;
+            margin: 0;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .work-item p {
+            padding: 20px;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Publications Section */
+        #six {
+            padding: 60px 20px;
+        }
+
+        .publication-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .publication-item h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .publication-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .publication-item a {
+            color: #3498db;
+            font-weight: 600;
+        }
+
+        /* Awards Section */
+        #seven {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .award-item {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .award-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .award-item i {
+            font-size: 2rem;
+            margin-right: 20px;
+            color: #3498db;
+        }
+
+        .award-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .award-item p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Footer Section */
+        #footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .icons li {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .icons a {
+            color: #ecf0f1;
+            transition: color 0.3s ease;
+        }
+
+        .icons a:hover {
+            color: #3498db;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            font-size: 1rem;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #header h1 {
+                font-size: 2.5rem;
+            }
+
+            .cv-button {
+                padding: 12px 30px;
+            }
+
+            .award-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .award-item i {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <div class="inner">
+        <a href="#" class="image avatar">
+            <img src="assets/images/Ramisa_Farha_Photo.jpg" alt="Ramisa Farha">
+        </a>
+        <h1>
+            <strong>Ramisa Farha</strong>
+            <br>
+            <span class="profession">Data Scientist | Machine Learning & AI Enthusiast</span>
+        </h1>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div id="main">
+
+    <!-- Introduction Section -->
+    <section id="one">
+        <header class="major">
+            <h2>Welcome to My Portfolio</h2>
+        </header>
+        <p>
+            Hi! I am Ramisa Farha. I am a graduate student specializing in data science, machine learning, and AI. I have experience working on various projects that span healthcare analytics, predictive modeling, and data visualization. My goal is to contribute to cutting-edge projects involving AI-powered solutions, healthcare optimization, and data-driven innovation.
+            <br>
+            In the section below, you may view a selection of my projects and articles. Links to my projects' GitHub repositories will also be included.
+        </p>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        <p>Download my full CV by clicking the button below:</p>
+        <a href="assets/CV/Ramisa_Farha_CV.pdf" class="cv-button" download>Download CV</a>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="two">
+        <h2>Skills</h2>
+        <div class="skill-cards">
+            <div class="skill-card">
+                <h3>Data Analytics & Data Science</h3>
+                <p>Predictive Modeling, Data Visualization, Statistical Analysis, Python, R, MATLAB, TensorFlow, Power BI, Tableau</p>
+            </div>
+            <div class="skill-card">
+                <h3>Programming & Database Management</h3>
+                <p>SQL, Relational Databases, Python Automation, Data Cleaning, Data Transformation</p>
+            </div>
+            <div class="skill-card">
+                <h3>Machine Learning & AI</h3>
+                <p>Model Development, Generative AI, LLMs, EDA, Trend Analysis, Deep Learning</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools & Frameworks</h3>
+                <p>NumPy, Pandas, scikit-learn, PyTorch, Hadoop, Spark, Azure, AWS</p>
+            </div>
+            <div class="skill-card">
+                <h3>Reporting & Visualization</h3>
+                <p>Power BI, Tableau, Data Dashboarding, SQL Reporting</p>
+            </div>
+            <div class="skill-card">
+                <h3>Collaboration & Communication</h3>
+                <p>Cross-functional Teamwork, Agile/SCRUM, Stakeholder Engagement, Report Presentation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="three">
+        <h2>Research Interests</h2>
+        <div class="research-cards">
+            <div class="research-card">
+                <h3>Data Science & Predictive Modeling</h3>
+                <p>Using data to make predictions and improve decision-making in various industries.</p>
+            </div>
+            <div class="research-card">
+                <h3>Machine Learning & Deep Learning</h3>
+                <p>Developing and applying machine learning models to solve real-world problems.</p>
+            </div>
+            <div class="research-card">
+                <h3>Natural Language Processing (NLP)</h3>
+                <p>Building models for understanding and generating human language using AI.</p>
+            </div>
+            <div class="research-card">
+                <h3>Healthcare Analytics & Medical Image Analysis</h3>
+                <p>Leveraging data and AI to improve healthcare outcomes and medical imaging techniques.</p>
+            </div>
+            <div class="research-card">
+                <h3>AI for Social Good & Ethical AI</h3>
+                <p>Developing AI technologies that have a positive social impact and addressing ethical concerns.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section id="five">
+    <h2>Some Projects I've Worked On</h2>
+    <div class="row">
+        <!-- Healthcare Cost Analysis and Optimization -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/healthcare_cost_analysis.jpg" class="image fit thumb"><img src="assets/images/healthcare_cost_analysis.jpg" alt="Healthcare Cost Analysis" /></a>
+            <a href="https://github.com/RamisaFarha/Healthcare-Cost-Analysis-and-Optimization"><h3>Healthcare Cost Analysis and Optimization</h3></a>
+            <p>Analyzed healthcare costs using SQL and Python to identify cost drivers and optimize strategies while ensuring quality care.</p>
+        </article>
+
+        <!-- Pharmaceutical Work Package Cost Estimation Tool -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/pharmaceutical_cost_estimation.jpg" class="image fit thumb"><img src="assets/images/pharmaceutical_cost_estimation.jpg" alt="Pharmaceutical Cost Estimation" /></a>
+            <a href="https://github.com/RamisaFarha/Pharmaceutical-Work-Package-Cost-Estimation-Tool"><h3>Pharmaceutical Work Package Cost Estimation Tool</h3></a>
+            <p>Created an AI-driven cost estimation tool for pharmaceutical budgeting using machine learning and natural language processing techniques.</p>
+        </article>
+
+        <!-- Bias Mitigation in Healthcare AI -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/healthcare_ai_bias_mitigation.jpg" class="image fit thumb"><img src="assets/images/healthcare_ai_bias_mitigation.jpg" alt="Healthcare AI Bias Mitigation" /></a>
+            <a href="https://github.com/RamisaFarha/Bias-Mitigation-in-Healthcare-AI-Disease-Diagnosis"><h3>Bias Mitigation in Healthcare AI</h3></a>
+            <p>Addressed biases in machine learning models used for disease diagnosis, ensuring fairness and better outcomes across diverse demographics.</p>
+        </article>
+
+        <!-- Multi-label Classification with Keras -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/multi_label_classification.jpg" class="image fit thumb"><img src="assets/images/multi_label_classification.jpg" alt="Multi-label Classification with Keras" /></a>
+            <a href="https://github.com/RamisaFarha/Multi-label-Classification-Keras"><h3>Multi-label Classification with Keras</h3></a>
+            <p>Implemented multi-label image classification using a pre-trained Keras model. Classified fashion items into multiple categories, allowing each image to belong to more than one category.</p>
+        </article>
+
+        <!-- Predicting Hospital Readmission Rates -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/hospital_readmission.jpg" class="image fit thumb">
+                <img src="assets/images/hospital_readmission.jpg" alt="Hospital Readmission Prediction" />
+            </a>
+            <a href="https://github.com/RamisaFarha/Predicting-Hospital-Readmission-Rates">
+                <h3>Predicting Hospital Readmission Rates</h3>
+            </a>
+            <p>Developed a predictive model using univariate analysis and classification techniques to assess hospital readmission rates for diabetic patients.</p>
+        </article>
+
+        <!-- Automation of Regulatory Document Reviews -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/regulatory_document_automation.jpg" class="image fit thumb">
+                <img src="assets/images/regulatory_document_automation.jpg" alt="Automation of Regulatory Document Reviews" />
+            </a>
+            <a href="https://github.com/RamisaFarha/Automation-of-Regulatory-Document-Reviews-in-Pharmaceutical-Development"><h3>Automation of Regulatory Document Reviews</h3></a>
+            <p>Created an automated system to streamline the review of regulatory documents, optimizing the DHF process using Python-based data processing and analytics for compliance and quality improvements.</p>
+        </article>
+
+        <!-- Skin Cancer Lesion Classification -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/skin_cancer_classification.jpg" class="image fit thumb"><img src="assets/images/skin_cancer_classification.jpg" alt="Skin Cancer Classification" /></a>
+            <a href="https://github.com/RamisaFarha/Skin-cancer-lesion-classification"><h3>Skin Cancer Lesion Classification</h3></a>
+            <p>Developed a convolutional neural network (CNN) model to classify skin lesions using the HAM10000 dataset, improving early detection of skin cancer.</p>
+        </article>
+
+        <!-- Breast Cancer Prediction -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/breast_cancer_prediction.jpg" class="image fit thumb"><img src="assets/images/breast_cancer_prediction.jpg" alt="Breast Cancer Prediction" /></a>
+            <a href="https://github.com/RamisaFarha/Breast-Cancer-Prediction"><h3>Breast Cancer Prediction with Wisconsin Dataset</h3></a>
+            <p>Applied machine learning techniques to predict breast cancer using the Wisconsin dataset, contributing to early detection and better prognosis.</p>
+        </article>
+
+        <!-- Exploratory Data Analysis on Student Mental Health -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/Exploratory Data Analysis on Student Mental Health.jpg" class="image fit thumb"><img src="assets/images/Exploratory Data Analysis on Student Mental Health.jpg" alt="" /></a>
+            <a href="https://github.com/RamisaFarha/EDA-on-Student-Mental-Health"><h3>Exploratory Data Analysis on Student Mental Health</h3></a>
+            <p>Performed exploratory data analysis to uncover insights into factors affecting student mental health.</p>
+        </article>
+
+        <!-- EDA Project: Salaries of Different Data Science Fields -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/Data-Analytics-For-Small-Business.jpg" class="image fit thumb"><img src="assets/images/Data-Analytics-For-Small-Business.jpg" alt="" /></a>
+            <a href="https://github.com/RamisaFarha/EDA-on-Salaries-of-Different-Data-Science-Fields"><h3>EDA Project: Salaries of Different Data Science Fields</h3></a>
+            <p>Analyzed salary data across various data science fields using SQL and Python. Explored the impact of work experience, job titles, company size, and location on salary trends.</p>
+        </article>
+
+        <!-- Clash of Titans Network Topology -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/clashoftitans.webp" class="image fit thumb"><img src="assets/images/clashoftitans.webp" alt="" /></a>
+            <a href="https://github.com/RamisaFarha/Clash-of-Titans"><h3>Clash of Titans Network Topology</h3></a>
+            <p>In Packet Tracer, established a network topology for six titans, configuring hardware and testing different network conditions to simulate real-world scenarios.</p>
+        </article>
+
+        <!-- Line Follower Robot in Webots -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/Line-Follower-Robot.jpg" class="image fit thumb"><img src="assets/images/Line-Follower-Robot.jpg" alt="" /></a>
+            <a href="https://github.com/RamisaFarha/Line-Follower-Robot-in-Webots"><h3>Line Follower Robot in Webots</h3></a>
+            <p>Designed a line-following robot using Webots that tracks a line on a surface, using image processing from the mounted camera to guide the robot along the path.</p>
+        </article>
+
+        <!-- ElectroSmart: Smart Recommendations for Electronics -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/electrosmart.jpg" class="image fit thumb">
+                <img src="assets/images/electrosmart.jpg" alt="ElectroSmart: Smart Recommendations for Electronics" />
+            </a>
+            <a href="https://github.com/RamisaFarha/ElectroSmart-Recommendations">
+                <h3>ElectroSmart: Smart Recommendations for Electronics</h3>
+            </a>
+            <p>This project implements a Product Recommendation System that utilizes user ratings to suggest products to customers. The system leverages collaborative filtering techniques to provide personalized recommendations based on historical data.</p>
+        </article>
+
+        <!-- Image-to-Text Extraction with Tesseract OCR -->
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="assets/images/image_to_text_extraction.jpg" class="image fit thumb">
+                <img src="assets/images/image_to_text_extraction.jpg" alt="Image-to-Text Extraction with Tesseract OCR" />
+            </a>
+            <a href="https://github.com/RamisaFarha/Image-to-Text-Extraction-with-Tesseract-OCR">
+                <h3>Image-to-Text Extraction with Tesseract OCR</h3>
+            </a>
+            <p>This project demonstrates the use of Tesseract OCR to extract text from images in the IIIT-5K Word Dataset. The goal is to evaluate the performance of text extraction and quantify the success rate.</p>
+        </article>
+    </div>
+</section>
+
+
+    <!-- Publications Section -->
+    <section id="six">
+        <h2>Publications</h2>
+        <div class="publication-item">
+            <h3><a href="https://ieeexplore.ieee.org/document/10089263" target="_blank">IEEE CSDE/i-COSTE 2022</a></h3>
+            <p><strong>Nuha, Nigar Sultana, Farha, Ramisa, et al. (2022). "Lossless Segmentation of Brain Tumors from MRI Images using 3D U-Net."</strong></p>
+            <p>Presented an efficient 3D U-Net segmentation technique for MRI images, improving disease detection while reducing GPU memory usage.</p>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="seven">
+        <h2>Awards & Honors</h2>
+        <div class="award-item">
+            <i class="fas fa-trophy"></i>
+            <div>
+                <h3>1st Runner-up, Amazon Trusted AI Challenge</h3>
+                <p>AWS HBCU Trusted AI Competition</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <i class="fas fa-medal"></i>
+            <div>
+                <h3>3rd Place Winner, HackAI 2024</h3>
+                <p>Morgan State University</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <i class="fas fa-award"></i>
+            <div>
+                <h3>Finalist, BRACU Intra Programming Contest</h3>
+                <p>BRAC University</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+     <!-- Get In Touch Section -->
+     <section id="nine">
+        <h2>Get In Touch</h2>
+        <p>Thank you for visiting, and please feel free to reach out to me.</p>
+        <div class="contact-form">
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+            <button type="submit">Send Message</button>
+        </div>
+        <ul>
+            <li><strong>Address:</strong> Frederick, Maryland, USA</li>
+            <li><strong>Phone:</strong> +14434161870</li>
+            <li><strong>Email:</strong> <a href="mailto:ramisa.maahi@gmail.com">ramisa.maahi@gmail.com</a></li>
+        </ul>
+    </section>
+
+
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/ramisa-farha/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+            <li><a href="https://github.com/RamisaFarha" class="icon brands fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://medium.com/@ramisafarha" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; 2025 Ramisa Farha</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
